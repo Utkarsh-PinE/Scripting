@@ -1,11 +1,1 @@
-Min_Spacing_M0_Via01
-{
-@ Min spacing between M0 and Via01 should be 0.3
-Spacing Between M0 and Via01
-}
 
-Error CommentMin_Enclosure_CO_Poly
-{
-@Min enclosure between CO and Poly should be 0.2
-Rule for enclosure between contact and poly
-}
