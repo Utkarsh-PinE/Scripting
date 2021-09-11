@@ -8,7 +8,7 @@
 
 # print "$array1[10]\n"
 # my @copy=@array1;
-# my $size=@array1;
+# my $size=@array1;				#print scalar @array1
 # print "$copy[2]\n$size";
 
 # my $len=$#array1;
