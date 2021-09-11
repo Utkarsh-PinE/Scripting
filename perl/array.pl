@@ -39,10 +39,17 @@ my @Alpha=(A..Z);
 # pop @alpha;
 # pop @Alpha;
 
-print"Length before :  $#num\n";
-my $variable = shift @num;
-print "$variable\n";
-print"Length after :  $#num\n";
-print"Before @num\n";
-unshift @num,12;
-print "After @num\n";
+# print"Length before :  $#num\n";
+# my $variable = shift @num;
+# print "$variable\n";
+# print"Length after :  $#num\n";
+# print"Before @num\n";
+# unshift @num,12;
+# print "After @num\n";
+
+
+my $string=join(';',@num);
+print "$string\n";
+
+my @new_num=split('',$string);
+print "$#new_num\n@new_num\n";
