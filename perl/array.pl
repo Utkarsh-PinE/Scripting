@@ -40,8 +40,8 @@ my @Alpha=(A..Z);
 # pop @Alpha;
 
 # print"Length before :  $#num\n";
-# my $variable = shift @num;
-# print "$variable\n";
+my $variable = shift @num;
+print "$variable\n";
 # print"Length after :  $#num\n";
 # print"Before @num\n";
 # unshift @num,12;
