@@ -187,3 +187,209 @@ for(keys %hash)
 }
 print %hash{'A'}->[3];
 =cut
+
+=begin
+#Cheking existence
+my %hash = ('A',1,'B',2,'C',3);
+my @num = (1..9);
+if(exists($hash{'A'}))
+{
+	print "hash{'A'} Exists\n";
+}
+else
+{
+	print "hash{'A'} Not exists\n";
+}
+if(exists($num[8]))
+{
+	print " num[15 ]Exists\n";
+}
+else
+{
+	print "num[15] Not exists\n";
+}
+=cut
+
+=begin
+#Adding and deleting
+my %hash = ('A',1,'B',2,'C',3);
+$hash{'D'}=4;
+print "$hash{D}\n";
+delete $hash{'D'};
+print "$hash{D}\n";
+@v=(1..9);
+print $#(keys %hash);
+=cut
+
+=begin
+#until loop
+my $a=4;
+until($a>10)
+{
+	print "$a\n";
+	$a++;
+}
+=cut
+
+=begin
+#while loop
+my $a=3;
+while($a<7)
+{
+	print "$a\n";
+	$a++; 
+}
+=cut
+
+
+#dowhile loop
+
+=begin
+my $c=1;
+do
+{
+	print "$c\n";
+	$c++;
+}while($c<6);
+=cut
+
+=begin
+#control statements in loop
+# my @num=(1..20);
+# for(my $i=0;$i<20;$i++)
+# {
+# 	if($i == 4)
+# 	{
+# 		last;								# last is break , next is continue
+# 	}
+# 	else
+# 	{
+# 		print "$num[$i]\n";
+# 	}
+# }
+=cut
+
+=begin
+#nested loop 
+for(my $i=0;$i<7;$i++)
+{
+	for(my $j=0;$j<5;$j++)
+	{
+		if($i==5)
+		{
+			last;
+		}
+		else
+		{
+			print "$i $j\n";
+		}
+	}
+}
+=cut
+
+=begin
+#goto
+my $p = 10;
+
+go : do
+{
+	if($p == 15)
+	{
+		$p++;
+		goto go;
+	}
+	print "Value = $p\n";
+	$p++;
+}while($p < 20);
+=cut
+
+
+=begin
+#if else if in loop
+for(my $a =1;$a<10;$a++)
+{
+	if($a == 4)
+	{
+		print "Hello";
+	} 
+	elsif($a == 6)
+	{
+		print "Hi\n";
+	}
+	else
+	{
+		print "Bye\n";
+	}
+}
+=cut
+
+=begin
+#ternary operator
+my $num1 = 30;
+my $str = ($num1 >25) ? "Pass" : "Fail";
+print "$str\n";
+=cut
+
+
+=begin
+#unless in loop
+for(my $a =1;$a<21;$a++)
+{
+unless($a == 20)
+	{
+		print "a is not equal to 20\n";
+	} 
+	elsif($a == 20)
+	{
+		print "a is 20\n";
+	}
+	else
+	{
+		print "I am not sure what is a\n";
+	}
+}
+=cut
+
+
+
+=begin
+#switch statement
+use Switch;							#sudo apt-get install libswitch-perl
+my $var=int(10);
+
+switch(int($var))
+{
+	case '10' {print "$var is string\n";}
+	case int(10)  {print "$var is number\n;"}
+	else     {print "Couldn't identify\n"}
+}
+=cut
+
+
+=begin
+#operators
+< lt
+>gt
+== eq
+<= le
+>= ge
+cmp (-1,0,1)
+
+a = "ABCgj" b ="GMIJ"
+$b cmp a -1 0 1
+
+bitwise and = &
+bitwise or = |
+bitwise xor = ^
+one compliment = ~
+left shift = <<
+right shift = >>
+
+
+homework:- 
+my $a = 12
+my $b = 13
+$c = $a & $b;
+$d = $a << 1   $b >> 2
+print "$c\n";
+=cut
