@@ -1,6 +1,6 @@
 #!/bin/bash
 #This is the script of the password manager project.
-source ~/pine/bash/password\ manager\ project/functions.sh
+source ~/Scripting/bash/password\ manager\ project/functions.sh
 IFS=$'\n'
 choice=0
 clear
