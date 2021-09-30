@@ -4,12 +4,13 @@
 # use stricts;
 
 =begin
+# Introduction
 my @array1=(1,2,3,4,5,6,7,8);
 my @array2=qw(PinE	batch		 Perl);
 
 print "$array1[10]\n"
 my @copy=@array1;
-my $size=@array1;				#print scalar @array1 || print @array1 . 
+my $size=@array1;				#print scalar @array1 || print @array1 .
 print "$copy[2]\n$size";
 
 my $len=$#array1;
@@ -19,6 +20,7 @@ print "$array1[3]\t$array1[-5]\n"
 =cut
 
 =begin
+# Arrays
 my @num=(1..10);
 my @alpha=(a..z);
 my @Alpha=(A..Z);
@@ -26,18 +28,8 @@ my @Alpha=(A..Z);
 print"@num\n@alpha\n@Alpha\n";
 =cut
 
-
-=begin
-my %hash=('Utkarsh',1,'Verma',2);
-$hash{123}="456";
-
-printf("$hash{123}\n");
-=cut
-
-
 =begin
 # Array Functions
-
 push @num,11;
 push @alpha,'A';
 push @Alpha,'z';
@@ -45,6 +37,7 @@ print"\n\n@num\n@alpha\n@Alpha\n";
 =cut
 
 =begin
+# Push pop in array
 # pop @num;
 # pop @alpha;
 # pop @Alpha;
@@ -68,7 +61,6 @@ print"\n\n@num\n@alpha\n@Alpha\n";
 
 =begin
 # Sort Function
-
 my @num2=(1,2,3,4,13);
 @num3 = sort {(-1,1)[$a<$b]} @num2;
 print "@num3";
@@ -83,7 +75,7 @@ print "After $temp[1]\n";
 =cut
 
 =begin
-Merging arrays
+# Merging arrays
 my @odd=(1,3,5);
 my @even = (2,4,6);
 my @final=(@odd,@even);
@@ -106,7 +98,7 @@ print "$var3\n@arr2\n";
 
 
 =begin
-#For loops
+# For loops
 my @num = (1..20);
 #for (initialization;condition;updation)
 for (my $i=0;$i<20;$i++)
@@ -129,49 +121,35 @@ print "\n";
 
 
 =begin
-#hashes
+# hashes
 my %hash = ('A',1,'B',2,'C',3);
 my @values = values (%hash);
 my @keys = keys (%hash);
 
 print %hash;
 
-foreach  $key (keys (%hash)) 
+foreach  $key (keys (%hash))
 {
 	print "$key ";
 }
 print "\n";
 
-foreach  $val (values (%hash)) 
+foreach  $val (values (%hash))
 {
 	print "$val ";
 }
 print "\n";
 =cut
 
-
 =begin
-Assignment :
-print output  like this :
-Value of hash<key> = <value>
-
-Answer :
-
-my %hash = ('A',1,'B',2,'C',3);
-for(keys %hash)
-{
-	print "Value of hash {$_} = <$hash{$_}>\n";
-}
-=cut
-
-=begin
+# looping in hash
 my @arr=(a..e);
 my @add=\@arr;
 %hash = ('A',[(1,2,3,4)],'B',@add,'C',3);
 for(keys %hash)
 {
 	print "Value of hash {$_} = ";
-	if(ref($hash{$_}) eq "") 
+	if(ref($hash{$_}) eq "")
 	{
 		print "$hash{$_}\n";
 	}
@@ -189,7 +167,7 @@ print %hash{'A'}->[3];
 =cut
 
 =begin
-#Cheking existence
+# Cheking existence
 my %hash = ('A',1,'B',2,'C',3);
 my @num = (1..9);
 if(exists($hash{'A'}))
@@ -211,7 +189,7 @@ else
 =cut
 
 =begin
-#Adding and deleting
+# Adding and deleting
 my %hash = ('A',1,'B',2,'C',3);
 $hash{'D'}=4;
 print "$hash{D}\n";
@@ -222,7 +200,7 @@ print $#(keys %hash);
 =cut
 
 =begin
-#until loop
+# until loop
 my $a=4;
 until($a>10)
 {
@@ -232,19 +210,17 @@ until($a>10)
 =cut
 
 =begin
-#while loop
+# while loop
 my $a=3;
 while($a<7)
 {
 	print "$a\n";
-	$a++; 
+	$a++;
 }
 =cut
 
-
-#dowhile loop
-
 =begin
+# dowhile loop
 my $c=1;
 do
 {
@@ -254,7 +230,7 @@ do
 =cut
 
 =begin
-#control statements in loop
+# control statements in loop
 # my @num=(1..20);
 # for(my $i=0;$i<20;$i++)
 # {
@@ -270,7 +246,7 @@ do
 =cut
 
 =begin
-#nested loop 
+# nested loop
 for(my $i=0;$i<7;$i++)
 {
 	for(my $j=0;$j<5;$j++)
@@ -288,7 +264,7 @@ for(my $i=0;$i<7;$i++)
 =cut
 
 =begin
-#goto
+# goto
 my $p = 10;
 
 go : do
@@ -305,13 +281,13 @@ go : do
 
 
 =begin
-#if else if in loop
+# if else if in loop
 for(my $a =1;$a<10;$a++)
 {
 	if($a == 4)
 	{
 		print "Hello";
-	} 
+	}
 	elsif($a == 6)
 	{
 		print "Hi\n";
@@ -324,7 +300,7 @@ for(my $a =1;$a<10;$a++)
 =cut
 
 =begin
-#ternary operator
+# ternary operator
 my $num1 = 30;
 my $str = ($num1 >25) ? "Pass" : "Fail";
 print "$str\n";
@@ -332,13 +308,13 @@ print "$str\n";
 
 
 =begin
-#unless in loop
+# unless in loop
 for(my $a =1;$a<21;$a++)
 {
 unless($a == 20)
 	{
 		print "a is not equal to 20\n";
-	} 
+	}
 	elsif($a == 20)
 	{
 		print "a is 20\n";
@@ -353,7 +329,7 @@ unless($a == 20)
 
 
 =begin
-#switch statement
+# switch statement
 use Switch;							#sudo apt-get install libswitch-perl
 my $var=int(10);
 
@@ -367,7 +343,7 @@ switch(int($var))
 
 
 =begin
-#operators
+# operators
 < lt
 >gt
 == eq
@@ -386,7 +362,7 @@ left shift = <<
 right shift = >>
 
 
-homework:- 
+homework:-
 my $a = 12
 my $b = 13
 $c = $a & $b;
