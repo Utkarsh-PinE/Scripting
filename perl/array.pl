@@ -369,3 +369,79 @@ $c = $a & $b;
 $d = $a << 1   $b >> 2
 print "$c\n";
 =cut
+
+=begin
+# Regex
+my $str="Hello I   am from Pine";
+$str=~m/I\s+am/;
+print "Matched : $&\n";
+print "Before  : $`\n";
+print "After   : $'\n";
+
+# #Remembrance
+$str=~m/I(\s+am)\s+(f.+)\s+/;
+print "First Remembrance : $1\n";
+print "Second Remembrance : $2\n";
+
+
+#Substitution
+$str=~s/aM/AM/i;                #i for case-insensitive
+print "$str";
+
+
+
+($strcopy=$str)=~s/am/AM/i;
+print "$str,$strcopy\n";
+
+
+#Translation
+$str =~ tr/o/./c;
+print $str;
+=cut
+
+=begin
+# Subroutine and Local/State Variables
+sub print_o
+{
+    print "Hello Utkarsh\n";
+}
+print_o();
+&print_o();
+
+sub average
+{
+    $sum=0,$n=@_;
+    foreach (@_)
+    {
+        $sum+=$_;
+    }
+    $avg=$sum/$n;
+    print "Average : $avg\n";
+}
+average(1,2,3);
+
+# Local Variable
+$string = "global";
+sub print_f
+{
+    print "Before $string\n";
+    local $string = "local";
+    print "After $string\n";
+}
+print_f($string);
+print "$string\n";
+
+
+#State Variable
+#Write use feature 'state'
+use feature state;
+sub count
+{
+    state $count = 0;               #same as static variable in c
+    print "$count\n";
+    $count++;
+}
+count();
+count();
+count();
+=cut
