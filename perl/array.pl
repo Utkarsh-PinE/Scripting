@@ -445,3 +445,72 @@ count();
 count();
 count();
 =cut
+
+=begin
+# Reading input
+my $var1 = <STDIN>;
+my $var2 = <>;
+chomp($var1);
+chomp($var2);
+print "$var1$var2";
+=cut
+
+=begin
+# File Handling
+# +>  : read,write,create
+# +<  : read,write
+# +>> : read,write,create,append
+open(fptr,"<input.txt");
+while(<fptr>){
+print "$_";
+}
+close(fptr);
+
+# Copying file to text
+open(fid1,"+<input.txt");
+open(fid2,"+>>copy.txt");             #or die/warn "Can't open file""
+while(<fid1>)
+{
+    print fid2 "Data : $_";
+}
+close(fid1);
+close(fid2);
+
+# Copying content in same file
+open(fid3,"+<input.txt");
+my @array=<fid3>;                     #copying file content to array
+print "Array :  @array";
+foreach my $j (@array)
+{
+    print fid3 "Data : $j";
+}
+close(fid3);
+
+# Deleting Files
+unlink("input.txt");
+
+# getc function
+open(fptr,"<input.txt");
+$char=getc(fptr);
+print "char : $char\n";
+$char=getc(fptr);
+print "char : $char\n";
+close(fptr);
+
+# reading directory
+opendir(DIR,'.') or die "Can't open file";
+while(readdir DIR)
+{
+    if( $_ =~ m/\.pl$/)
+    {
+        print "FILENAME $_\n";
+    }
+}
+=cut
+
+
+=begin
+# Running Unix Commands
+system("ls -l");
+print `ls`;                 #`command` : doesn't print on terminal
+=cut
