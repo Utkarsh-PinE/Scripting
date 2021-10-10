@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-use lib "/home/utkarsh/Scripting/perl/packages";
+use lib "$ENV{'HOME'}/Scripting/perl/packages";
 use cal;
 my $a=5;
 my $b=10;
