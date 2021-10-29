@@ -1,0 +1,3 @@
+[submodule "Password-Manager"]
+	path = Password-Manager
+	url = https://github.com/Utkarsh-PinE/Password-Manager.git
